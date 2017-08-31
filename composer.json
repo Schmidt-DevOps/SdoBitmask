@@ -1,0 +1,29 @@
+{
+  "name": "rsd/sdoBitmask",
+  "description": "Bitmask handling",
+  "minimum-stability": "stable",
+  "license": "LGPL-3.0",
+  "authors": [
+    {
+      "name": "Stefanie Schmidt",
+      "email": "stefanie+_gth@sdo.sh"
+    }
+  ],
+  "require-dev": {
+    "php": ">=7.1",
+    "phpunit/phpunit": "~6.3",
+    "phpunit/php-code-coverage": "~5.2",
+    "squizlabs/php_codesniffer": "2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "SdoBitmask\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SdoBitmask\\": "src/",
+      "SdoBitmask\\Tests\\": "test/unit"
+    }
+  }
+}

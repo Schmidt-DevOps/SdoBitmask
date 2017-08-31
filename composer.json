@@ -1,5 +1,5 @@
 {
-  "name": "rsd/sdoBitmask",
+  "name": "sdo/bitmask",
   "description": "Bitmask handling",
   "minimum-stability": "stable",
   "license": "LGPL-3.0",

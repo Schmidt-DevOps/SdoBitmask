@@ -11,19 +11,19 @@
   ],
   "require-dev": {
     "php": ">=7.1",
-    "phpunit/phpunit": "~6.3",
+    "phpunit/phpunit": "~6.0",
     "phpunit/php-code-coverage": "~5.2",
     "squizlabs/php_codesniffer": "2.*"
   },
   "autoload": {
     "psr-4": {
-      "SdoBitmask\\": "src/"
+      "Sdo\\Bitmask\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "SdoBitmask\\": "src/",
-      "SdoBitmask\\Tests\\": "test/unit"
+      "Sdo\\Bitmask\\": "src/",
+      "Sdo\\Bitmask\\Tests\\": "test/unit"
     }
   }
 }

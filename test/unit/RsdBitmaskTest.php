@@ -1,8 +1,8 @@
 <?php
 
-namespace SdoBitmask\Tests;
+namespace Sdo\Bitmask\Tests;
 
-use SdoBitmask\Tests\Stubs\FirstBitmask;
+use Sdo\Bitmask\Tests\Stubs\FirstBitmask;
 
 /**
  * SdoBitmask tests
@@ -20,7 +20,7 @@ class SdoBitmaskTest extends \PHPUnit\Framework\TestCase
      *
      * @return void
      */
-    public function testInit()
+    public function testInit(): void
     {
         $firstBitmask = new FirstBitmask(0);
 
@@ -33,8 +33,9 @@ class SdoBitmaskTest extends \PHPUnit\Framework\TestCase
      * Checks whether given flags are set or not
      *
      * @return void
+     * @throws \Exception
      */
-    public function testSetFlag()
+    public function testSetFlag(): void
     {
         $firstBitmask = new FirstBitmask(0);
 
@@ -63,7 +64,7 @@ class SdoBitmaskTest extends \PHPUnit\Framework\TestCase
      *
      * @return void
      */
-    public function testSetIllegalFlag()
+    public function testSetIllegalFlag(): void
     {
         $firstBitmask = new FirstBitmask(0);
 
@@ -80,7 +81,7 @@ class SdoBitmaskTest extends \PHPUnit\Framework\TestCase
      *
      * @return void
      */
-    public function testSetNegativeBitmask()
+    public function testSetNegativeBitmask(): void
     {
         try {
             new FirstBitmask(-2);

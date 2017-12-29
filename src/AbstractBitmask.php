@@ -1,6 +1,6 @@
 <?php
 
-namespace SdoBitmask;
+namespace Sdo\Bitmask;
 
 /**
  * Simple bitmask class to set bitmasks
@@ -90,6 +90,7 @@ abstract class AbstractBitmask
      * @param int $flag Bitmask flag
      *
      * @return self
+     * @throws \Exception
      */
     public function unsetFlag(int $flag): self
     {
@@ -97,7 +98,7 @@ abstract class AbstractBitmask
     }
 
     /**
-     * Checks whether a flag is power of two or not
+     * Checks whether a flag is a power of two or not
      *
      * @param int $flag Flag of bitmask
      *

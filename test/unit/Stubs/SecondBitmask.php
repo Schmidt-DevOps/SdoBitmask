@@ -1,8 +1,8 @@
 <?php
 
-namespace SdoBitmask\Tests\Stubs;
+namespace Sdo\Bitmask\Tests\Stubs;
 
-use SdoBitmask\AbstractBitmask;
+use Sdo\Bitmask\AbstractBitmask;
 
 /**
  * Simple class with constant bitmask flags

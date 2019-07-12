@@ -2,6 +2,8 @@
 
 namespace Sdo\Bitmask;
 
+use Exception;
+
 /**
  * Simple bitmask class to set bitmasks
  *
@@ -28,12 +30,12 @@ abstract class AbstractBitmask
      *
      * @param int $bitmask Bitmask in int representation
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function __construct(int $bitmask)
     {
         if ($bitmask < 0) {
-            throw new \Exception("Bitmask must not be negative!", 2);
+            throw new Exception("Bitmask must not be negative!", 2);
         }
         $this->bitmask = $bitmask;
     }
@@ -67,12 +69,12 @@ abstract class AbstractBitmask
      * @param bool $set  Set if true otherwise unset
      *
      * @return self
-     * @throws \Exception
+     * @throws Exception
      */
     public function setFlag(int $flag, bool $set = true): self
     {
         if ($flag != 0 && !$this->isPowerOfTwo($flag)) {
-            throw new \Exception("Illegal flag.", 1);
+            throw new Exception("Illegal flag.", 1);
         }
 
         if ($set) {
@@ -90,7 +92,7 @@ abstract class AbstractBitmask
      * @param int $flag Bitmask flag
      *
      * @return self
-     * @throws \Exception
+     * @throws Exception
      */
     public function unsetFlag(int $flag): self
     {

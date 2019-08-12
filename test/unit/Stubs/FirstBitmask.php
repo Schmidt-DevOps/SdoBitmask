@@ -16,7 +16,7 @@ use Sdo\Bitmask\AbstractBitmask;
  */
 class FirstBitmask extends AbstractBitmask
 {
-    const IS_A = 1;
-    const IS_B = 2;
-    const IS_C = 4;
+    const IS_A = 1 << 0; // =1
+    const IS_B = 1 << 1; // =2
+    const IS_C = 1 << 2; // =4
 }

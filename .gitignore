@@ -56,3 +56,4 @@ config/test.php
 # tmp
 tmp/*
 api/*
+.phpunit.result.cache

@@ -25,7 +25,7 @@ LGPL v3 or a commercial licence :) from stefanie+_gth@sdo.sh.
 
 # Requirements
 
-1. PHP 7.2, PHP 7.3, PHP 7.4 (maybe also newer versions)
+1. PHP 8.2 or newer
 
 # How to use
 

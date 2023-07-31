@@ -3,7 +3,7 @@
 SdoBitmask is a simple class to set flags of bitmasks
 
 1. Sets or unsets bitmask flags.
-1. Checks whether a flag is power of two.
+2. Checks whether a flag is power of two.
 
 ## How to use
 
@@ -58,7 +58,7 @@ LGPL v3 or a commercial licence :) from stefanie+_gth@sdo.sh.
 
 # Requirements
 
-1. PHP 7.1 (maybe also newer versions)
+1. PHP 8.1, or 8.2 or newer
 
 # How to use
 

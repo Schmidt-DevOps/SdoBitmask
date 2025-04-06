@@ -1,11 +1,3 @@
-# Created by .ignore support plugin (hsz.mobi)
-
-# User-specific stuff:
-
-# Sensitive or high-churn files:
-.idea
-
-### Symfony template
 # Cache and logs (Symfony2)
 /app/cache/*
 /app/logs/*
@@ -27,7 +19,7 @@
 /var/bootstrap.php.cache
 !bin/console
 !bin/symfony_requirements
-/vendor/
+vendor/
 
 # Assets and user uploads
 /web/bundles/
@@ -41,19 +33,12 @@
 /build/
 
 # Composer PHAR
-/composer.phar
 /composer.lock
+/.idea
 
-# bower
-bower_components
-node_modules
-
-# faba app assets
-config/prod.php
-config/dev.php
-config/test.php
-
-# tmp
-tmp/*
-api/*
+# Stuff
+.env
+bin/run_tests_*.sh
+internal_requests/
 .phpunit.result.cache
+.phpmd.result-cache.php

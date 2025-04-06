@@ -7,6 +7,9 @@ jobs:
       matrix:
         php-versions: ['8.4','8.3']
 
+    env:
+      PHP_CS_FIXER_IGNORE_ENV: 1
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -18,14 +21,31 @@ jobs:
           extensions: mbstring, dom, fileinfo # Add your extensions here.
           coverage: xdebug
 
-      - name: Cache Composer dependencies
+      - name: Get composer cache directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache dependencies
         uses: actions/cache@v3
         with:
-          path: /tmp/composer-cache
-          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
 
       - name: Prepare tests
         run: composer run-script tests_prepare
 
-      - name: Run tests
-        run: composer run-script tests_run
+      - name: Run Rector
+        run: composer run rector
+
+      - name: Run PHPMD
+        run: composer run phpmd
+
+      - name: Run PHP-CS-Fixer
+        run: composer run php-cs-fixer
+
+      - name: Run PHPStan
+        run: composer run phpstan
+
+      - name: Run PHPUnit
+        run: composer run phpunit

@@ -10,17 +10,14 @@ use Sdo\Bitmask\Tests\Stubs\FirstBitmask;
  * SdoBitmask tests
  *
  * @category Bitmask
- * @package  SdoBitmask
- * @author   Rene Schmidt <rene@sdo.sh>
- * @license  https://www.gnu.org/licenses/lgpl.html LGPLv3
- * @link     https://sdo.sh/
+ *
+ * @see     https://sdo.sh/
  */
 class SdoBitmaskTest extends TestCase
 {
     /**
      * Checks given bitmasks
      *
-     * @return void
      * @throws Exception
      */
     public function testInit(): void
@@ -35,7 +32,6 @@ class SdoBitmaskTest extends TestCase
     /**
      * Checks whether given flags are set or not
      *
-     * @return void
      * @throws Exception
      */
     public function testSetFlag(): void
@@ -65,7 +61,6 @@ class SdoBitmaskTest extends TestCase
     /**
      * Checks whether a flag is illegal
      *
-     * @return void
      * @throws Exception
      */
     public function testSetIllegalFlag(): void
@@ -75,30 +70,27 @@ class SdoBitmaskTest extends TestCase
         try {
             $firstBitmask->setFlag(5);
             self::fail("Exception expected!");
-        } catch (Exception $e) {
-            self::assertSame(1, $e->getCode());
+        } catch (Exception $exception) {
+            self::assertSame(1, $exception->getCode());
         }
     }
 
     /**
      * Check whether negative bitmask detection actually works
-     *
-     * @return void
      */
     public function testSetNegativeBitmask(): void
     {
         try {
             new FirstBitmask(-2);
             self::fail("Exception expected!");
-        } catch (Exception $e) {
-            self::assertSame(2, $e->getCode());
+        } catch (Exception $exception) {
+            self::assertSame(2, $exception->getCode());
         }
     }
 
     /**
      * Check idempotency of setFlag() I guess, cannot remember really what I was getting at here.
      *
-     * @return void
      * @throws Exception
      */
     public function testSetFlagIdempotency(): void
